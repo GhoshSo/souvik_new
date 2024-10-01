@@ -15,6 +15,9 @@ view: orders {
   dimension: status {
     type: string
     sql: ${TABLE}.status ;;
+    suggest_persist_for: "0 second"
+    # suggest_dimension: status
+    # suggest_explore: order_items
   }
   dimension: is_completed {
     type: yesno
