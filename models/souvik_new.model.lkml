@@ -106,8 +106,7 @@ explore: inventory_items {
   }
 }
 
-explore: korean {}
-
+### Shifting korean
 explore: korean_string {}
 
 explore: map_layer {}
@@ -120,12 +119,14 @@ explore: map_layer {}
 #   }
 # }
 
+explore: korean {}
+
 explore: order_items {
 
-    # access_filter: {
-    #   field: users.last_name
-    #   user_attribute: npfc
-    # }
+    access_filter: {
+      field: users.last_name
+      user_attribute: npfc
+    }
 
   join: orders {
     type: left_outer
