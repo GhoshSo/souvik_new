@@ -121,6 +121,12 @@ explore: orders {
 }
 
 explore: order_items {
+
+    # access_filter: {
+    #   field: users.last_name
+    #   user_attribute: npfc
+    # }
+
   join: orders {
     type: left_outer
     sql_on: ${order_items.order_id} = ${orders.id} ;;
@@ -144,6 +150,7 @@ explore: order_items {
     sql_on: ${inventory_items.product_id} = ${products.id} ;;
     relationship: many_to_one
   }
+
 }
 
 explore: order_items_vijaya {
