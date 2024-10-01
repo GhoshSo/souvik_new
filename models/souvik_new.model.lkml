@@ -172,6 +172,56 @@ explore: order_items_vijaya {
   }
 }
 
+
+# explore: +order_items {
+#   aggregate_table: last_two_years_aa {
+#     query: {
+#       dimensions: [
+#         orders.created_date,
+#         orders.is_completed,
+#         orders.status,
+#         products.item_name,
+#         users.city,
+#         users.created_date,
+#         users.state
+#       ]
+#       measures: [orders.count, products.count]
+#       filters: [orders.created_date: "2 years"]
+#       timezone: "America/Los_Angeles"
+#     }
+
+#     materialization: {
+#       datagroup_trigger: souvik_new_default_datagroup
+#     }
+#   }
+
+
+
+#   aggregate_table: last_five_years_aa {
+#     query: {
+#       dimensions: [
+#         orders.created_date,
+#         orders.status,
+#         products.item_name,
+#         users.city,
+#         users.created_date,
+#         users.state
+#       ]
+#       measures: [orders.count, products.count]
+#       filters: [orders.created_date: "5 years"]
+#       timezone: "America/Los_Angeles"
+#     }
+
+#     materialization: {
+#       datagroup_trigger: souvik_new_default_datagroup
+#     }
+#   }
+
+
+# }
+
+
+
 explore: order_status_vijaya {}
 
 explore: pegdates {}
