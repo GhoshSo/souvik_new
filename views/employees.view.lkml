@@ -13,6 +13,10 @@ view: employees {
     type: string
     sql: ${TABLE}.Name ;;
   }
+  dimension: name1 {
+    type: string
+    sql: ${TABLE}.Name ;;
+  }
   measure: count {
     type: count
     drill_fields: [name]
