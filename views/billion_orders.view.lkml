@@ -18,4 +18,8 @@ view: billion_orders {
     type: count
     drill_fields: [orders.id]
   }
+  measure: count1 {
+    type: count
+    drill_fields: [orders.id]
+  }
 }
