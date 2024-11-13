@@ -123,10 +123,6 @@ explore: korean {}
 
 explore: order_items {
 
-    access_filter: {
-      field: users.last_name
-      user_attribute: npfc
-    }
 
   join: orders {
     type: left_outer
