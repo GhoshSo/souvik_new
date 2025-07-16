@@ -30,9 +30,21 @@ view: order_items {
     timeframes: [raw, time, date, week, month, quarter, year]
     sql: ${TABLE}.returned_at ;;
   }
+  dimension: ret_date {
+    type: date
+    sql: ${returned_raw} ;;
+  }
   dimension: sale_price {
     type: number
     sql: ${TABLE}.sale_price ;;
+  }
+  measure: total_sale_price {
+    type: number
+    sql: ROUND(SUM(${sale_price}),2) ;;
+    html: {{ rendered_value }} <br>
+    Abfallmenge (t):
+    {{ order_items.count._value }} <br>
+    ;;
   }
   measure: count {
     type: count
