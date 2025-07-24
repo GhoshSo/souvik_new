@@ -24,6 +24,13 @@ explore: billion_orders {
   }
 }
 
+map_layer: german_postalcode{
+  #feature_key: "ISO_A3"
+  file: "/plz_berlin.json"
+  format: topojson
+  label: "desired label for chart visualization"
+  }
+
 explore: connection_reg_r3 {}
 
 explore: customer {}
